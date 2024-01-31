@@ -1,0 +1,175 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* App.css */
+*{
+  font-family: 'Play', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url(images/bg.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  text-shadow:
+    /* White glow */
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 5px #fff;
+}
+
+.app-container {
+  text-align: center;
+}
+
+.glass-box {
+  padding-top: 40px;
+  position: relative;
+  background-image: url(images/clearoff.png);
+  opacity: 0.75;
+  background-size:cover;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  width: 1200px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: openAnimation 0.2s ease-out;
+  transform-origin: center center;
+}
+
+@keyframes openAnimation {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.glass-box img{
+  object-fit: contain;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 10px 0;
+  font-size: 18px;
+  text-align: left;
+}
+input[type="checkbox"] {
+  /* Hide default checkbox */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+  box-shadow:
+    /* White glow */
+    0 0 10px #4e77e9,
+    0 0 20px #4e77e9,
+    0 0 20px #4e77e9;
+}
+
+/* Style custom checkbox */
+input[type="checkbox"]:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #3498db;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+/* Style custom checkbox when checked */
+input[type="checkbox"]:checked:before {
+  background-color: #3498db;
+}
+
+Link {
+  color: #fff;
+  text-decoration: none;
+  background: #2980b9;
+  padding: 15px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+Link:hover {
+  background: #1c6ca7;
+}
+.title {
+  position: absolute;
+  top: 90px;
+}
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+li {
+  font-size: 30px;
+}
