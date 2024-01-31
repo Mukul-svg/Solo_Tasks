@@ -14,7 +14,7 @@ function CompletedTasks({ selectedPerson }) {
 
   const fetchCompletedTasks = async (person) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/completed-tasks/${person}`);
+      const response = await axios.get(`https://solo-tasks-backend.vercel.app/api/completed-tasks/${person}`);
       setCompletedTasks(response.data);
     } catch (error) {
       console.error(`Error fetching completed tasks for ${person}:`, error);
