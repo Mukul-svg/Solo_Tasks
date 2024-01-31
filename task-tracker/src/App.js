@@ -20,7 +20,7 @@ function App() {
 
   const fetchTasks = async (person) => {
     try {
-      const response = await axios.get(`https://solo-tasks-backend.vercel.app/api/tasks/${person}`);
+      const response = await axios.get(`http://localhost:5000/api/tasks/${person}`);
       setTasks(response.data);
     } catch (error) {
       console.error(`Error fetching ${person}'s tasks:`, error);
@@ -29,7 +29,7 @@ function App() {
 
   const fetchPersonInfo = async (person) => {
     try {
-      const response = await axios.get(`https://solo-tasks-backend.vercel.app/api/persons/${person}`);
+      const response = await axios.get(`http://localhost:5000/api/persons/${person}`);
       setPersonInfo(response.data);
     } catch (error) {
       console.error(`Error fetching ${person}'s info:`, error);
@@ -38,7 +38,7 @@ function App() {
 
   const markTaskCompleted = async (taskId) => {
     try {
-      await axios.post(`https://solo-tasks-backend.vercel.app/api/tasks/${selectedPerson}/${taskId}/complete`);
+      await axios.post(`http://localhost:5000/api/tasks/${selectedPerson}/${taskId}/complete`);
       fetchTasks(selectedPerson);
     } catch (error) {
       console.error('Error marking task as completed:', error);

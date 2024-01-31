@@ -5,7 +5,7 @@ const cron = require('node-cron');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const uri = "mongodb+srv://mukul:<password>@cluster0.ruamrih.mongodb.net/solo-tasks?retryWrites=true&w=majority";
+const uri = "mongodb+srv://mukul:mukul@cluster0.ruamrih.mongodb.net/solo-tasks?retryWrites=true&w=majority";
 
 app.use(cors());
 app.use(express.json());
