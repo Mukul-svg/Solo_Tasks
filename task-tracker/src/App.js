@@ -6,6 +6,19 @@ import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import CompletedTasks from './CompletedTasks';
 import './App.css';
 
+// Import profile images or replace with your own image URLs
+import mukulImage from './images/mukul.png';
+import aryanImage from './images/aryan.jpg';
+import atharvaImage from './images/atharva.png';
+import rachitImage from './images/rachit.png';
+
+const profileImages = {
+  Mukul: mukulImage,
+  Aryan: aryanImage,
+  Atharva: atharvaImage,
+  Rachit: rachitImage,
+};
+
 function App() {
   const [selectedPerson, setSelectedPerson] = useState(null);
   const [tasks, setTasks] = useState([]);
@@ -56,10 +69,17 @@ function App() {
           <div className="person-selection">
             <h2>Select a Person:</h2>
             <div className="person-buttons">
-              <button onClick={() => selectPerson('Mukul')}>Mukul</button>
-              <button onClick={() => selectPerson('Aryan')}>Aryan</button>
-              <button onClick={() => selectPerson('Atharva')}>Atharva</button>
-              <button onClick={() => selectPerson('Rachit')}>Rachit</button>
+              {Object.keys(profileImages).map((person) => (
+                <div className='person buttons'>
+                <img
+                  key={person}
+                  src={profileImages[person]}
+                  alt={person}
+                  onClick={() => selectPerson(person)}
+                />
+                <h3>{person}</h3>
+                </div>
+              ))}
             </div>
           </div>
         )}
